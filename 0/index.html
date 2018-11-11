@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app-2">
+
+        <p v-bind:title="message">
+          鼠标悬停几秒钟查看此处动态绑定的提示信息！
+        </p>
+        <p v-bind:title='message'>
+            鼠标悬停几秒钟查看此处动态绑定的提示信息！
+        </p>
+        <p v-bind:title="this.message">
+            鼠标悬停几秒钟查看此处动态绑定的提示信息！
+        </p>
+        <p v-bind:title=message>
+            鼠标悬停几秒钟查看此处动态绑定的提示信息！
+        </p>
+    
+        <p v-if="seen">现在你看到我了</p>
+        <p v-if="seen2">现在你看到我了2</p>
+
+        <ol>
+            <li v-for="tab in tabs">{{tab}}</li>
+        <ol>
+
+        <input v-model="x"/>
+        <p>{{x}}</p>
+
+    </div>
+
+    <script>
+    var app2 = new Vue({
+        el: '#app-2',
+        data: {
+            message: '悬浮提示',
+            seen: true,
+            seen2: '这里填 Truthy 值',
+            tabs: [11,22,33,44,88],
+            x: 'frank'
+        }
+    })
+    </script>
+
+</body>
+</html>
