@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+    <style>
+        .slides{
+            width: 300px;
+            background: red;
+            height: 100px;
+        }
+        .window{
+            width: 100px;
+            height: 100px;   
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="window">
+            <div class="slides" v-bind:style='{transform:translateValue}'>
+                    <img v-for='img in images' v-bind:src='img'>
+            </div>
+        </div>
+        <button v-on:click=go(0)>1</button>
+        <button v-on:click=go(1)>2</button>
+        <button v-on:click=go(2)>3</button>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                translateValue: '',
+                images: [
+                    './1.png',
+                    './2.png',
+                    './3.png'
+                ]
+            },
+            template: ``,
+            methods: {
+                go(index){
+                    this.translateValue = `translateX(${-100*index}px)`
+                }
+            }
+        })
+    </script>
+</body>
+</html>

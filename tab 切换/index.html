@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <style>
+        ol{
+            list-style: none;
+        }
+        .active{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <li v-for='tab in tabs' v-bind:class='{active:tab.name===selected}' v-on:click='selected=tab.name'>{{tab.name}}</li>
+        </ol>
+        <div v-for='tab in tabs' v-if='selected===tab.name'>{{tab.content}}</div>
+    </div>
+    <script>
+    let app = new Vue({
+        el:'#app',
+        data: {
+            selected:'a',
+            tabs: [
+                {name:'a',content:'123'},
+                {name:'b',content:'456'},
+                {name:'c',content:'789'}
+            ]
+        }
+    })    
+    </script>
+</body>
+</html>
