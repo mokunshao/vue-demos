@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <style>
+      .active {
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <a :class="{active:isActive}" :href="url">点我</a>
+      <button @Click="changeColor()">改变颜色</button>
+    </div>
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          url: "http://qq.com",
+          isActive: false
+        },
+        methods: {
+          changeColor() {
+            this.isActive = !this.isActive;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
