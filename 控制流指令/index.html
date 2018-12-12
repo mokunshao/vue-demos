@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div>你是{{ user }}</div>
+      <div v-if="user==='admin'|user==='superAdmin'">你好，管理员。</div>
+      <div v-else-if="user==='hr'">你好，HR</div>
+      <div v-else>你没有权限访问本页面</div>
+      <button @click="changeUser">更改用户</button>
+    </div>
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          user: "admin",
+          userList: ["admin", "superAdmin", "hr", "guest"]
+        },
+        methods: {
+          changeUser() {
+            let index = Math.floor(Math.random() * 4);
+            this.user = this.userList[index];
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
