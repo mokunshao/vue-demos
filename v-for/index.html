@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="food in foodList">
+          {{ food.name }}： ￥{{
+            food.discout ? food.price * food.discout : food.price
+          }}
+        </li>
+      </ul>
+    </div>
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          foodList: [
+            { name: "鱼肉", price: 12, discout: 0.5 },
+            { name: "牛肉", price: 30, discout: 0.7 }
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>
