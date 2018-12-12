@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./vue.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../vue.js"></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="app">
-        <input type="text" v-model='name' placeholder="name">
-        <p>你的名字是：{{name}}</p>
-        <input type="text" v-model='gender' placeholder="gender">
-        <p v-show='gender'>你的性别是：{{gender}}</p>
-        <input type="text" v-model='age' placeholder="age"> 
-        <p v-if='age'>你的年龄是：{{age}}</p>
+      <div>
+        <input type="text" v-model="name" placeholder="name" />
+        <p>你的名字是：{{ name }}</p>
+      </div>
+      <div>
+        <input type="text" v-model="gender" placeholder="gender" />
+        <p v-show="gender">你的性别是：{{ gender }}</p>
+      </div>
+      <div>
+        <input type="text" v-model="age" placeholder="age" />
+        <p v-if="age">你的年龄是：{{ age }}</p>
+      </div>
     </div>
     <script>
-    var app = new Vue({
-        el: '#app',
+      var app = new Vue({
+        el: "#app",
         data: {
-            name: 'A',
-            age: null,
-            gender: null
+          name: "A",
+          age: null,
+          gender: null
         }
-    })
+      });
     </script>
-</body>
+  </body>
 </html>
