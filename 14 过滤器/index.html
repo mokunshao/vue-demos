@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div><input type="text" v-model="length" />{{ length }}cm</div>
+      <div>{{ length | meter }}</div>
+      <div>
+        <input type="text" v-model="price" />{{ price | currency('USD') }}
+      </div>
+    </div>
+    <script>
+      Vue.filter("meter", (val, unit) => {
+        val = val || 0;
+        unit = "m";
+        return (val / 100).toFixed(2) + unit;
+      });
+      Vue.filter("currency", (val, unit) => {
+        val = val || 0;
+        unit = unit || "元";
+        return val + unit;
+      });
+      new Vue({
+        el: "#app",
+        data: {
+          price: 10,
+          length: 20
+        }
+      });
+    </script>
+  </body>
+</html>
