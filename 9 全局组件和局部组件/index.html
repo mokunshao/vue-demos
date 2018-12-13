@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <style>
+      #app,#app2,#app3 {
+        border: solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"><alert></alert> <alert></alert></div>
+    <div id="app2"><alert></alert></div>
+    <div id="app3"><alert1></alert1></div>
+    <script>
+      Vue.component("alert", {
+        template: "<button @click='onClick'>弹</button>",
+        methods: {
+          onClick() {
+            alert("Yo.");
+          }
+        }
+      });
+      let app = new Vue({
+        el: "#app"
+      });
+      let app2 = new Vue({
+        el: "#app2"
+      });
+      let app3 = new Vue({
+        el: "#app3",
+        components: {
+          alert1: {
+            template: "<button @click='onClick'>弹（局部组件）</button>",
+            methods: {
+              onClick() {
+                alert("Yo.");
+              }
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
