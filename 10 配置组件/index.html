@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .liked {
+        background-color: blue;
+        color: white;
+      }
+    </style>
+    <script src="../vue.js"></script>
+  </head>
+  <body>
+    <div id="app"><like></like></div>
+    <script>
+      Vue.component("like", {
+        template:
+          "<button @click='addLike' :class={liked:liked}>👍{{likeCount}}</button>",
+        data() {
+          return { likeCount: 10, liked: false };
+        },
+        methods: {
+          addLike() {
+            if (this.liked === false) {
+              this.likeCount++;
+              this.liked = true;
+            } else if (this.liked === true) {
+              this.likeCount--;
+              this.liked = false;
+            }
+          }
+        }
+      });
+      let app = new Vue({
+        el: "#app"
+      });
+    </script>
+  </body>
+</html>
