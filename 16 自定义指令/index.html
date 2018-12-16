@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .box {
+        background: grey;
+        margin: 10px;
+        padding: 20px;
+        width: 450px;
+        border: 3px solid black;
+      }
+    </style>
+    <script src="../vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div v-pin.bottom.right="box1.pinned" class="box box1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia sequi
+        earum quis corrupti minima autem vero illum ducimus temporibus velit
+        eaque asperiores rem quibusdam aperiam sunt voluptatem repudiandae,
+        aliquid placeat.
+        <button @click="box1.pinned=!box1.pinned">pin or not</button>
+      </div>
+      <div v-pin:highlight.top.right="box2.pinned" class="box box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut iure
+        deleniti! Nostrum molestias ipsam fugit excepturi eos autem quisquam
+        nihil accusamus expedita quas libero illum, perspiciatis esse blanditiis
+        minus? <button @click="box2.pinned=!box2.pinned">pin or not</button>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio libero
+        voluptatem sint omnis iusto eius cum. Quae corrupti saepe tenetur beatae
+        dolores dolore harum architecto, provident iusto debitis quis labore!
+      </p>
+    </div>
+    <script>
+      Vue.directive("pin", (el, binding) => {
+        if (binding.value) {
+          el.style.position = "fixed";
+          if (binding.modifiers) {
+            for (let key in binding.modifiers) {
+              el.style[key] = "10px";
+            }
+          }
+          if (binding.arg === "highlight") {
+            el.style.background = "yellow";
+          }
+        } else {
+          el.style.position = "static";
+        }
+      });
+      new Vue({
+        el: "#app",
+        data: {
+          box1: {
+            pinned: false
+          },
+          box2: {
+            pinned: true
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
