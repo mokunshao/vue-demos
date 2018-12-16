@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .box {
+        background: grey;
+        margin: 10px;
+        padding: 20px;
+        width: 450px;
+        border: 3px solid black;
+      }
+    </style>
+    <script src="../vue.js"></script>
+  </head>
+  <body>
+    <div id="app"><tooltip></tooltip> <popup></popup></div>
+    <script>
+      let base = {
+        data: () => {
+          return {
+            visible: false
+          };
+        },
+        methods: {
+          toggle() {
+            this.visible = !this.visible;
+          },
+          show() {
+            this.visible = true;
+          },
+          hide() {
+            this.visible = false;
+          }
+        }
+      };
+
+      Vue.component("tooltip", {
+        template: `
+          <div>
+            <span @mouseenter="show" @mouseleave="hide">鼠标移动到这里</span>
+            <div v-if="visible">你好</div>
+          </div>`,
+        mixins: [base]
+      });
+
+      Vue.component("popup", {
+        template: `
+          <div>
+            <button @click="toggle">popup</button>
+            <div v-if="visible">
+              <span @click="hide">X</span>
+              <h4>hello</h4>
+              <p>hello world</p>
+            </div>
+          </div>`,
+        mixins: [base]
+      });
+      
+      new Vue({
+        el: "#app"
+      });
+    </script>
+  </body>
+</html>
