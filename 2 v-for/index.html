@@ -10,7 +10,7 @@
   <body>
     <div id="app">
       <ul>
-        <li v-for="food in foodList">
+        <li v-for="food in foodList" :key="food.name">
           {{ food.name }}： ￥{{
             food.discout ? food.price * food.discout : food.price
           }}
