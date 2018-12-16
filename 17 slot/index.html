@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .panel {
+        max-width: 300px;
+        border: 1px solid #999;
+        margin-bottom: 15px;
+      }
+      .panel > * {
+        padding: 15px;
+      }
+      .content {
+        border-top: 1px solid #999;
+        border-bottom: 1px solid #999;
+      }
+    </style>
+    <script src="../vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <panel
+        ><div slot="footer">Goodbye!</div>
+        <div slot="title">Hello World</div></panel
+      >
+      <panel>
+        <div slot="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus amet
+          dolore atque consequuntur sequi sapiente quia a dicta natus vero
+          maxime et quae, nobis dolorum quaerat autem, ex cum laboriosam!
+        </div>
+      </panel>
+    </div>
+    <template id="panel-template">
+      <div class="panel">
+        <div class="title"><slot name="title">默认标题</slot></div>
+        <div class="content"><slot name="content">默认内容</slot></div>
+        <div class="footer"><slot name="footer">默认页脚</slot></div>
+      </div>
+    </template>
+    <script>
+      Vue.component("panel", {
+        template: "#panel-template"
+      });
+      new Vue({
+        el: "#app"
+      });
+    </script>
+  </body>
+</html>
